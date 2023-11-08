@@ -1,35 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState('olive');
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div
+        className='w-full h-screen duration-200'
+        style={{ backgroundColor: color }}
+      >
+        Hello world
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='fixed flex flex-wrap justify-center px-2 bottom-12 inset-x-0 bg-red-950 font-black'>
+        <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-black px-3 py-2 rounded-3xl'>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'red' }}
+            onClick={() => setColor('red')}
+          >
+            Red
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'green' }}
+            onClick={() => setColor('green')}
+          >
+            Green
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'blue' }}
+            onClick={() => setColor('blue')}
+          >
+            Blue
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'olive' }}
+            onClick={() => setColor('olive')}
+          >
+            Olive
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'gray' }}
+            onClick={() => setColor('gray')}
+          >
+            Gray
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'yellow' }}
+            onClick={() => setColor('yellow')}
+          >
+            Yellow
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'pink' }}
+            onClick={() => setColor('pink')}
+          >
+            Pink
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'purple' }}
+            onClick={() => setColor('purple')}
+          >
+            Purple
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'lavender' }}
+            onClick={() => setColor('lavender')}
+          >
+            Lavender
+          </button>
+          <button
+            className='outline-none px-4 py-1 rounded-full text-black font-black shadow-xl'
+            style={{ backgroundColor: 'white' }}
+            onClick={() => setColor('white')}
+          >
+            White
+          </button>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
